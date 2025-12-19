@@ -49,7 +49,7 @@ Each node:
 
 ## 🧠 State Design
 
-```python
+'''python
 class JournalState(TypedDict):
     entry_text: str
     sentiment: Literal["positive", "negative", "neutral"] | None
@@ -58,7 +58,7 @@ class JournalState(TypedDict):
     history: list[str] | None
 
 The entire agent operates by reading and updating this shared state.
-
+---
 
 
 
@@ -71,7 +71,7 @@ The entire agent operates by reading and updating this shared state.
 ## 🚀 How to Run
 1️⃣ Install dependencies
 pip install langgraph langchain-groq python-dotenv
-
+---
 
 Make sure you have a valid Groq API key set in your environment variables.
 
