@@ -36,6 +36,7 @@ Each node:
 
 ## 🗂️ Project Structure
 
+'''python
 ├── state.py # TypedDict defining the shared graph state
 ├── nodes.py # LangGraph node implementations
 ├── graph.py # StateGraph wiring
@@ -50,12 +51,14 @@ Each node:
 ## 🧠 State Design
 
 '''python
+
 class JournalState(TypedDict):
     entry_text: str
     sentiment: Literal["positive", "negative", "neutral"] | None
     tags: list[str] | None
     reflection: str | None
     history: list[str] | None
+    
 ---
 The entire agent operates by reading and updating this shared state.
 
@@ -64,12 +67,14 @@ The entire agent operates by reading and updating this shared state.
 1️⃣ Install dependencies
 '''python
 pip install langgraph langchain-groq python-dotenv
+
 ---
 
 Make sure you have a valid Groq API key set in your environment variables.
 
 2️⃣ Run the agent
 python run.py
+
 ---
 
 You’ll be prompted:
