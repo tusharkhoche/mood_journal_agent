@@ -36,26 +36,37 @@ Each node:
 
 ## 🗂️ Project Structure
 
-
-├── state.py # TypedDict defining the shared graph state
-├── nodes.py # LangGraph node implementations
-├── graph.py # StateGraph wiring
-├── storage.py # JSON-based history persistence
-├── run.py # CLI entry point
-├── history.json # Persisted reflection history (auto-created)
+```text
+.
+├── state.py        # TypedDict defining the shared graph state
+├── nodes.py        # LangGraph node implementations
+├── graph.py        # StateGraph wiring
+├── storage.py      # JSON-based history persistence
+├── run.py          # CLI entry point
+├── history.json    # Persisted reflection history (auto-created)
 └── README.md
+
 
 ---
 
+
+---
+
+## ✅ Fix 2: State Design code block (render-safe)
+
+Same rule: backticks must be at column 1.
+
+```markdown
 ## 🧠 State Design
 
-
+```python
 class JournalState(TypedDict):
     entry_text: str
     sentiment: Literal["positive", "negative", "neutral"] | None
     tags: list[str] | None
     reflection: str | None
     history: list[str] | None
+
     
 ---
 
