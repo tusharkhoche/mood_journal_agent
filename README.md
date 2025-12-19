@@ -47,7 +47,7 @@ Each node:
 └── README.md
 
 ---
-
+```
 
 ## 🧠 State Design
 
@@ -61,8 +61,10 @@ class JournalState(TypedDict):
 
     
 ---
-
+```
 The entire agent operates by reading and updating this shared state.
+
+
 
 
 ## 🚀 How to Run
