@@ -36,7 +36,7 @@ Each node:
 
 ## 🗂️ Project Structure
 
-'''python
+
 ├── state.py # TypedDict defining the shared graph state
 ├── nodes.py # LangGraph node implementations
 ├── graph.py # StateGraph wiring
@@ -44,17 +44,19 @@ Each node:
 ├── run.py # CLI entry point
 ├── history.json # Persisted reflection history (auto-created)
 └── README.md
+
 ---
 
 ## 🧠 State Design
 
-'''python
+
 class JournalState(TypedDict):
     entry_text: str
     sentiment: Literal["positive", "negative", "neutral"] | None
     tags: list[str] | None
     reflection: str | None
     history: list[str] | None
+    
 ---
 
 The entire agent operates by reading and updating this shared state.
