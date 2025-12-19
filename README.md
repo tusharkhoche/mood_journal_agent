@@ -46,17 +46,9 @@ Each node:
 ├── history.json    # Persisted reflection history (auto-created)
 └── README.md
 
-
 ---
 
 
----
-
-## ✅ Fix 2: State Design code block (render-safe)
-
-Same rule: backticks must be at column 1.
-
-```markdown
 ## 🧠 State Design
 
 ```python
