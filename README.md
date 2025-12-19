@@ -56,20 +56,13 @@ class JournalState(TypedDict):
     tags: list[str] | None
     reflection: str | None
     history: list[str] | None
-
-The entire agent operates by reading and updating this shared state.
 ---
-
-
-
-
-
-
-
+The entire agent operates by reading and updating this shared state.
 
 
 ## 🚀 How to Run
 1️⃣ Install dependencies
+'''python
 pip install langgraph langchain-groq python-dotenv
 ---
 
@@ -77,24 +70,23 @@ Make sure you have a valid Groq API key set in your environment variables.
 
 2️⃣ Run the agent
 python run.py
-
+---
 
 You’ll be prompted:
-
 How was your day?
 
 
 Example input:
-
 My day was fantastic. Enjoyed vacation time with family.
 
+---
 ## 3️⃣ Example Output
 Sentiment: positive
 Tags: ['family', 'rest']
 Reflection: Spending quality time with family can be truly uplifting...
 History count: 3
 
-
+---
 Reflections are automatically saved to history.json.
 
 ## 💾 History Persistence
@@ -108,6 +100,7 @@ Reflections are automatically saved to history.json.
 
 This keeps the project simple while demonstrating real-world persistence.
 
+---
 ## 🧪 Testing Approach
     Each node was tested independently before graph wiring:
     analyze_mood → sentiment classification
@@ -116,6 +109,7 @@ This keeps the project simple while demonstrating real-world persistence.
     log_history → append-only behavior
 This mirrors best practices for LangGraph development.
 
+---
 ## 🎯 Learning Goals Achieved
 
 This project demonstrates:
@@ -128,6 +122,7 @@ File-based persistence
 CLI-based agent execution
 Debugging and hardening LLM outputs
 
+---
 ## 🔮 Possible Extensions
     Conditional branching using Command
     Human-in-the-loop pauses using Interrupt
@@ -136,10 +131,14 @@ Debugging and hardening LLM outputs
     Web UI (FastAPI / Streamlit)
     Multi-entry sentiment trends
 
+---
 ## 📜 License
     MIT License (or update as needed)
 
+---
 ## 🙌 Acknowledgements
     LangChain Academy
     LangGraph documentation and examples
     Groq + LLaMA models
+
+---
