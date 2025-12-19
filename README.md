@@ -31,6 +31,9 @@ Each node:
 
 ---
 
+
+
+
 ## 🗂️ Project Structure
 
 ├── state.py # TypedDict defining the shared graph state
@@ -56,7 +59,16 @@ class JournalState(TypedDict):
 
 The entire agent operates by reading and updating this shared state.
 
-🚀 How to Run
+
+
+
+
+
+
+
+
+
+## 🚀 How to Run
 1️⃣ Install dependencies
 pip install langgraph langchain-groq python-dotenv
 
@@ -76,7 +88,7 @@ Example input:
 
 My day was fantastic. Enjoyed vacation time with family.
 
-3️⃣ Example Output
+## 3️⃣ Example Output
 Sentiment: positive
 Tags: ['family', 'rest']
 Reflection: Spending quality time with family can be truly uplifting...
@@ -85,80 +97,49 @@ History count: 3
 
 Reflections are automatically saved to history.json.
 
-💾 History Persistence
-
-Reflection history is stored in a local history.json file
-
-Loaded at startup
-
-Appended after each run
-
-Safely handles:
-
-Missing file
-
-Empty file
-
-Invalid JSON
+## 💾 History Persistence
+    Reflection history is stored in a local history.json file
+    Loaded at startup
+    Appended after each run
+    Safely handles:
+    Missing file
+    Empty file
+    Invalid JSON
 
 This keeps the project simple while demonstrating real-world persistence.
 
-🧪 Testing Approach
-
-Each node was tested independently before graph wiring:
-
-analyze_mood → sentiment classification
-
-extract_tags → robust tag parsing
-
-generate_reflection → tone & format validation
-
-log_history → append-only behavior
-
+## 🧪 Testing Approach
+    Each node was tested independently before graph wiring:
+    analyze_mood → sentiment classification
+    extract_tags → robust tag parsing
+    generate_reflection → tone & format validation
+    log_history → append-only behavior
 This mirrors best practices for LangGraph development.
 
-🎯 Learning Goals Achieved
+## 🎯 Learning Goals Achieved
 
 This project demonstrates:
-
-Core LangGraph concepts:
-
-StateGraph
-
-Shared state updates
-
-Node isolation
-
+    Core LangGraph concepts:
+        StateGraph
+        Shared state updates
+        Node isolation
 Prompt discipline vs post-processing
-
 File-based persistence
-
 CLI-based agent execution
-
 Debugging and hardening LLM outputs
 
-🔮 Possible Extensions
+## 🔮 Possible Extensions
+    Conditional branching using Command
+    Human-in-the-loop pauses using Interrupt
+    Weekly or monthly summary node
+    SQLite-based persistence
+    Web UI (FastAPI / Streamlit)
+    Multi-entry sentiment trends
 
-Conditional branching using Command
+## 📜 License
+    MIT License (or update as needed)
 
-Human-in-the-loop pauses using Interrupt
-
-Weekly or monthly summary node
-
-SQLite-based persistence
-
-Web UI (FastAPI / Streamlit)
-
-Multi-entry sentiment trends
-
-📜 License
-
-MIT License (or update as needed)
-
-🙌 Acknowledgements
-
-LangChain Academy
-
-LangGraph documentation and examples
-
-Groq + LLaMA models
+## 🙌 Acknowledgements
+    LangChain Academy
+    LangGraph documentation and examples
+    Groq + LLaMA models
