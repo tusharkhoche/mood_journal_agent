@@ -275,24 +275,3 @@ def log_history(state: JournalState) -> dict:
         new_history = history + [reflection]
 
     return {"history": new_history}
-
-def gratitude_branch(state: "JournalState") -> dict:
-    """
-    Reads:
-        - state["entry_text"]
-        - state["sentiment"]
-
-    Writes (returns update for):
-        - Option 1: modifies "reflection" to include a gratitude angle
-        - Option 2: adds a new field later like "gratitude_note" (not yet in state)
-          (for now, you can just adjust "reflection")
-
-    Responsibility:
-        - If mood is negative, add a gentle reframe:
-            - Ask the user to notice 1–2 things that were okay or good today.
-            - Encourage a balanced view without invalidating their feelings.
-        - Typically called BEFORE generate_reflection or as part of its logic,
-          depending on how you wire the graph.
-    """
-    # TODO: Implement gratitude-style adjustment or prompt
-    ...
