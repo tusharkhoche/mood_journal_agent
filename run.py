@@ -2,7 +2,7 @@ from graph import build_graph
 from state import JournalState
 from storage import save_history, load_history
 
-def make_state(entry_text: str) -> JournalState:
+def initialize_state(entry_text: str) -> JournalState:
     memory = load_history()
 
     return {
@@ -18,7 +18,7 @@ if __name__ == "__main__":
     graph = build_graph()
     entry = input("How was your day? ").strip()
 
-    state = make_state(entry)
+    state = initialize_state(entry)
     final_state = graph.invoke(state)
 
     print("\n--- Results ---")
