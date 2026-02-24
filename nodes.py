@@ -7,11 +7,10 @@ from state import JournalState
 load_dotenv()
 
 llm = ChatGroq(
-    model="meta-llama/llama-4-maverick-17b-128e-instruct",
+    model="llama-3.3-70b-versatile",
     temperature=0.0,
     max_retries=2,
 )
-
 
 def analyze_mood(state: JournalState) -> Dict[str, str]:
     """

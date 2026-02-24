@@ -22,8 +22,8 @@ if __name__ == "__main__":
     final_state = graph.invoke(state)
 
     print("\n--- Results ---")
-    print("Sentiment:", final_state["sentiment"])
-    print("Tags:", final_state["tags"])
+    #print("Sentiment:", final_state["sentiment"])
+    #print("Tags:", final_state["tags"])
     print("Reflection:", final_state["reflection"])
     save_history(final_state["reflection"])
     #print("History:", final_state["history"])
